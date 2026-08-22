@@ -256,4 +256,21 @@ public:
 		}
 		return temp->data;
 	}
+
+	int kthElementFromLastTwoPointers(int kth) {
+		if (head == nullptr) {
+			return -1;
+		}
+		Node *fastNode = head->next;
+		for (int i = 1; i < kth; i ++) {
+			fastNode = fastNode->next;
+		}
+		Node *temp = head;
+		while (fastNode != nullptr)
+		{
+			temp = temp->next;
+			fastNode = fastNode->next;
+		}
+		return temp->data;
+	}
 };

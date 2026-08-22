@@ -15,5 +15,6 @@ int main() {
     ll.push_back(7);
     cout << endl;
     ll.print_linked_list();
-    cout << "Kth Last element is = " << ll.kthElementFromLast(4) << endl;
+    cout << "Kth Last element is = " << ll.kthElementFromLast(3) << endl;
+    cout << "Kth Last element Two Pinter is = " << ll.kthElementFromLastTwoPointers(3) << endl;
 }
