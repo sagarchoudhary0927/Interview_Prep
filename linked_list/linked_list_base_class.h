@@ -129,4 +129,28 @@ public:
 		}
 		return idx;
 	}
+
+	int helperSearchRecursive(int d, Node* n, int count) {
+		cout << "---------------------" << endl;
+		cout << "helperSearchRecursive called for d = " << d << " and count = " << count << endl;
+		if (n == nullptr)
+		{
+			cout << "helperSearchRecursive returning -1 as tail hit" << endl;
+			return -1;
+		}
+		cout << "helperSearchRecursive for node = " << n->data << endl;
+		if (n->data == d)
+		{
+			cout << "helperSearchRecursive as node adat and passed data is same hence returning count = " << count << endl;
+			return count;
+		}
+		count = count + 1;
+		return helperSearchRecursive(d, n->next, count);
+	}
+
+	int getPositionRecursive(int d) {
+		Node *n = head;
+		int count = 1;
+		return helperSearchRecursive(d, n, count);
+	}
 };

@@ -69,6 +69,10 @@ int main()
 
      cout << endl;
      cout << "Index of Eleiment 15 is = " << ll.getPosition(15) << endl;
+
+
+     cout << endl;
+     cout << "Index of Eleiment 20 recursively is = " << ll.getPositionRecursive(20) << endl;
      cout << "Sagar";
      return 0;
 }
