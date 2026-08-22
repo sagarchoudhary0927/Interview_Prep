@@ -236,4 +236,24 @@ public:
 		}
 		head = recursiveReverseHelper(head);
 	}
+
+	int kthElementFromLast(int kthElement) {
+		int totalSize = size;
+		int kithElementFromStart = size - kthElement + 1;
+		Node *temp = head;
+		int ans = -1;
+		for (int i = 1; i < kithElementFromStart; i++)
+		{
+			if (temp == nullptr) {
+				cout << "Linekd List was empty hence returning -1" << endl;
+				return ans;
+			}
+			temp = temp->next;
+		}
+		if (temp == nullptr) {
+			cout << "Linekd List was empty hence returning -1" << endl;
+		    return ans;
+		}
+		return temp->data;
+	}
 };
