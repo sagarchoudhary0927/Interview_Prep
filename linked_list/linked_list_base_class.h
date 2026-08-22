@@ -86,5 +86,29 @@ public:
 		return this->size;
 	}
 
+	void insert_at(int d, int pos) {
+		cout << "Now inserting at position = " << pos << " in linked list and the data is = " << d << endl;
+		if (pos <= 0 || pos == 1) {
+			push_front(d);
+			return;
+		}  else if (pos > size) {
+          push_back(d);
+          return;
+		} else {
+           // Creating the new node first 
+			Node* n = new Node(d);
+			int count = 1;
+			Node* temp = head;
+			while (count < pos - 1) {
+				temp = temp->next;
+				count = count + 1;
+			}
+			Node* nextNode = temp->next;
+			temp->next = n;
+			n->next = nextNode;
+			size++;
+		}
+	}
+
 
 };

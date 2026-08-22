@@ -35,6 +35,38 @@ int main()
      int sizeOfLL = ll.getSize();
      cout << "Size of Linked List is = " << sizeOfLL << endl;
 
+     // Inserting in linked list 
+
+     cout << endl;
+     ll.insert_at(-1, 0);
+     cout << endl;
+     ll.print_linked_list();
+     cout << endl;
+     sizeOfLL = ll.getSize();
+     cout << "Size of Linked List is = " << sizeOfLL << endl;
+     cout << endl;
+     ll.insert_at(0, 1);
+     cout << endl;
+     ll.print_linked_list();
+     cout << endl;
+     sizeOfLL = ll.getSize();
+     cout << "Size of Linked List is = " << sizeOfLL << endl;
+
+    ll.insert_at(11, 13);
+     cout << endl;
+     ll.print_linked_list();
+     cout << endl;
+     sizeOfLL = ll.getSize();
+     cout << "Size of Linked List is = " << sizeOfLL << endl;
+
+
+     ll.insert_at(12, 15);
+     cout << endl;
+     ll.print_linked_list();
+     cout << endl;
+     sizeOfLL = ll.getSize();
+     cout << "Size of Linked List is = " << sizeOfLL << endl;
+
 
     cout << "Sagar";
     return 0;
