@@ -67,7 +67,8 @@ int main()
      sizeOfLL = ll.getSize();
      cout << "Size of Linked List is = " << sizeOfLL << endl;
 
-
-    cout << "Sagar";
-    return 0;
+     cout << endl;
+     cout << "Index of Eleiment 15 is = " << ll.getPosition(15) << endl;
+     cout << "Sagar";
+     return 0;
 }

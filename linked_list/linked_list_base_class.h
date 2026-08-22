@@ -109,6 +109,24 @@ public:
 			size++;
 		}
 	}
-
-
+    
+	// Function gives the position of the Element in the Linked List
+	// Positon indexing is based on 1 , 2, 3 , ..... n.
+	// -1 means element is not present
+	int getPosition(int d) {
+		int idx = -1;
+		Node *temp = head;
+		int count = 1;
+		while (temp != nullptr)
+		{
+			int dataOfNode = temp->data;
+			if (dataOfNode == d) {
+				idx = count;
+				break;
+			}
+			count = count + 1;
+			temp = temp->next;
+		}
+		return idx;
+	}
 };
