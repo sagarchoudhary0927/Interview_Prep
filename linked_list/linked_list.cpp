@@ -73,6 +73,8 @@ int main()
 
      cout << endl;
      cout << "Index of Eleiment 20 recursively is = " << ll.getPositionRecursive(20) << endl;
-     cout << "Sagar";
+     cout << endl;
+
+     cout << "Full size of linked list in memory is = " << ll.getFullSizeOfLinkedListInMemory() << endl;
      return 0;
 }

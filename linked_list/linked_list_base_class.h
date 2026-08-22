@@ -153,4 +153,16 @@ public:
 		int count = 1;
 		return helperSearchRecursive(d, n, count);
 	}
+
+	int getFullSizeOfLinkedListInMemory() {
+		Node *temp = head;
+		int size = 0;
+		while (temp != nullptr)
+		{
+			int d = temp->data;
+			size += sizeof(d);
+			temp = temp->next;
+		}
+		return size;
+	}
 };
