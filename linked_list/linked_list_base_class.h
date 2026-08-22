@@ -165,4 +165,38 @@ public:
 		}
 		return size;
 	}
+
+	void pop_first() {
+		if (head == nullptr) {
+			cout << "No need to delete the node from the first as the Linekd lIts is empty " << endl;
+			return;
+		}
+		Node *n = head;
+		Node *nextNode = n->next;
+		head = nextNode;
+		n = nullptr;
+		delete n;
+		size--;
+		return;
+	}
+
+	void pop_last() {
+		if (head == nullptr || tail == nullptr) {
+			cout << "No need to delete the node from the first as the Linekd lIts is empty " << endl;
+			return;
+		}
+		Node *n = head;
+		while (n != nullptr && n->next != tail) {
+			n = n->next;
+		}
+		if (n != nullptr) {
+			Node *lastNode = n->next;
+			n->next = nullptr;
+			tail = n;
+			lastNode = nullptr;
+			delete lastNode;
+			size--;
+			return;
+		}
+	}
 };

@@ -76,5 +76,22 @@ int main()
      cout << endl;
 
      cout << "Full size of linked list in memory is = " << ll.getFullSizeOfLinkedListInMemory() << endl;
-     return 0;
+
+     cout << "Deleting first node of the linked list " << endl;
+     ll.pop_first();
+     cout << "Size npw is " << ll.getSize();
+     cout << endl;
+     ll.print_linked_list();
+     cout << endl;
+
+    cout << "Deleting last node of the linked list " << endl;
+    ll.pop_last();
+    cout << "Size npw is " << ll.getSize();
+    cout << endl;
+     ll.print_linked_list();
+     cout << endl;
+
+
+
+    return 0;
 }
