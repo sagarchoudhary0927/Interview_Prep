@@ -273,4 +273,8 @@ public:
 		}
 		return temp->data;
 	}
+
+	Node* getHead() {
+		return head;
+	}
 };
