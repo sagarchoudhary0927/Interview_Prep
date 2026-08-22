@@ -32,6 +32,9 @@ int main()
      ll.print_last();
      cout << endl;
 
+     int sizeOfLL = ll.getSize();
+     cout << "Size of Linked List is = " << sizeOfLL << endl;
+
 
     cout << "Sagar";
     return 0;
