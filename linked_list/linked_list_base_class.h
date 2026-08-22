@@ -199,4 +199,41 @@ public:
 			return;
 		}
 	}
+
+	Node* recursiveReverseHelper(Node* n) {
+		if (n == nullptr) {
+			return nullptr;
+		}
+		Node *newNode = recursiveReverseHelper(n->next);
+		cout << "returning back now " << endl;
+		if (newNode == nullptr)
+		{
+			// It means function has hit the tail and this is the tail
+			newNode = new Node(n->data);
+			return newNode;
+		}
+		else
+		{
+			// Here we have to build the Linked List
+			Node *temp = newNode;
+			while (temp->next != nullptr)
+			{
+				temp = temp->next;
+				if (temp != nullptr) {
+					cout << temp->data << endl;
+				}
+			}
+			temp->next = n;
+			n->next = nullptr;
+			return newNode;
+		}
+		return newNode;
+	}
+
+	void reverseLinkedList() {
+		if (head == nullptr) {
+			return;
+		}
+		head = recursiveReverseHelper(head);
+	}
 };
