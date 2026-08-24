@@ -277,4 +277,8 @@ public:
 	Node* getHead() {
 		return head;
 	}
+
+	void kReverseLinkedList(int k) {
+		
+	}
 };
