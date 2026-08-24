@@ -1,4 +1,6 @@
 #include <iostream>
+#include<vector>
+
 #include "tree_node.h"
 using namespace std;
 
@@ -33,6 +35,18 @@ void printTree(TreeNode *rootNode) {
 }
 
 
+void inOrderTraversalList(TreeNode *rootNode, vector<int> &ans) {
+ if (rootNode == nullptr) {
+    return;
+  }
+  ans.push_back(rootNode->data);
+  // Printing Left Node
+  inOrderTraversalList(rootNode->left, ans);
+  // Printing Right Node
+  inOrderTraversalList(rootNode->right, ans);
+}
+
+
 
 
 int main() {
@@ -41,7 +55,19 @@ int main() {
   tree = buildTree();
   cout << endl;
   cout << "Tree is created \n";
+  // Inorder Traversal Print
   printTree(tree);
+
+  // Inorder Traversal (Output: Vector / List)
+  vector<int> ans;
+  inOrderTraversalList(tree, ans);
+  cout << endl;
+  cout << "--------------------------------" << endl;
+  for (int x : ans) {
+    cout << x << " ";
+  }
+  cout << endl;
+  cout << "--------------------------------" << endl;
   cout << endl;
   return 0;
 }
