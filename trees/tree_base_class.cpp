@@ -47,6 +47,18 @@ void preOrderTraversalList(TreeNode *rootNode, vector<int> &ans) {
   preOrderTraversalList(rootNode->right, ans);
 }
 
+void inOrderTraversal(TreeNode *rootNode) {
+  if (rootNode == nullptr) {
+    return;
+  }
+  //Traversing Left Child First
+  inOrderTraversal(rootNode->left);
+  // Action with Parent
+  cout << rootNode->data << " ";
+  // Traversing Right
+  inOrderTraversal(rootNode->right);
+}
+
 
 
 
@@ -67,6 +79,14 @@ int main() {
   for (int x : ans) {
     cout << x << " ";
   }
+  cout << endl;
+  cout << "--------------------------------" << endl;
+  cout << endl;
+
+  cout << "--------------------------------" << endl;
+  cout << endl;
+  cout << "Printing In Order Traversal" << endl;
+  inOrderTraversal(tree);
   cout << endl;
   cout << "--------------------------------" << endl;
   cout << endl;
