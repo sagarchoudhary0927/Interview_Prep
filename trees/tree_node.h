@@ -3,7 +3,12 @@ using namespace std;
 
 
 class TreeNode {
-  int data;
-  TreeNode *left;
-  TreeNode *right;
+
+
+  public:
+    int data;
+    TreeNode *left;
+    TreeNode *right;
+    // Constructor 
+    TreeNode(int d):data(d),left(nullptr),right(nullptr){};
 };
