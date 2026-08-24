@@ -35,16 +35,16 @@ void printTree(TreeNode *rootNode) {
 }
 
 
-void inOrderTraversalList(TreeNode *rootNode, vector<int> &ans) {
+void preOrderTraversalList(TreeNode *rootNode, vector<int> &ans) {
   if (rootNode == nullptr) {
     ans.push_back(-1);
     return;
   }
   ans.push_back(rootNode->data);
   // Printing Left Node
-  inOrderTraversalList(rootNode->left, ans);
+  preOrderTraversalList(rootNode->left, ans);
   // Printing Right Node
-  inOrderTraversalList(rootNode->right, ans);
+  preOrderTraversalList(rootNode->right, ans);
 }
 
 
@@ -59,9 +59,9 @@ int main() {
   // Inorder Traversal Print
   printTree(tree);
 
-  // Inorder Traversal (Output: Vector / List)
+  // PreOrderTraversalList Traversal (Output: Vector / List)
   vector<int> ans;
-  inOrderTraversalList(tree, ans);
+  preOrderTraversalList(tree, ans);
   cout << endl;
   cout << "--------------------------------" << endl;
   for (int x : ans) {
