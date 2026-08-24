@@ -36,7 +36,8 @@ void printTree(TreeNode *rootNode) {
 
 
 void inOrderTraversalList(TreeNode *rootNode, vector<int> &ans) {
- if (rootNode == nullptr) {
+  if (rootNode == nullptr) {
+    ans.push_back(-1);
     return;
   }
   ans.push_back(rootNode->data);
