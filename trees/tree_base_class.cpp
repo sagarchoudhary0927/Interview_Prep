@@ -1,5 +1,6 @@
 #include <iostream>
 #include<vector>
+#include<queue>
 
 #include "tree_node.h"
 using namespace std;
@@ -59,6 +60,34 @@ void inOrderTraversal(TreeNode *rootNode) {
   inOrderTraversal(rootNode->right);
 }
 
+void levelOrderTraversal(TreeNode *root) {
+  queue<TreeNode *> list;
+  list.push(root);
+  list.push(nullptr);
+
+  while (!list.empty()) {
+    TreeNode *temp = list.front();
+    if (temp == nullptr) {
+      cout << endl;
+      list.pop();
+      if(!list.empty()) {
+        list.push(nullptr);
+      }
+    } else {
+      list.pop();
+      cout << temp->data << " ";
+      if (temp->left)
+      {
+        list.push(temp->left);
+      }
+      if(temp->right) 
+      {
+        list.push(temp->right);
+      }
+    }
+  }
+}
+
 
 
 
@@ -89,6 +118,10 @@ int main() {
   inOrderTraversal(tree);
   cout << endl;
   cout << "--------------------------------" << endl;
+  cout << endl;
+
+  cout << "Now printing level order traversal" << endl;
+  levelOrderTraversal(tree);
   cout << endl;
   return 0;
 }
